@@ -1,0 +1,130 @@
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "A futuristic dashboard for data visualization.",
+      "imageUrl": "https://picsum.photos/seed/project1/800/600",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "AI-powered mobile application interface.",
+      "imageUrl": "https://picsum.photos/seed/project2/800/600",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-3",
+      "description": "E-commerce platform with a clean, modern design.",
+      "imageUrl": "https://picsum.photos/seed/project3/800/600",
+      "imageHint": "ecommerce website"
+    },
+    {
+      "id": "project-4",
+      "description": "Cybersecurity analysis tool interface.",
+      "imageUrl": "https://picsum.photos/seed/project4/800/600",
+      "imageHint": "cyber security"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Avatar for a client testimonial",
+      "imageUrl": "https://picsum.photos/seed/testimonial1/100/100",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Avatar for a client testimonial",
+      "imageUrl": "https://picsum.photos/seed/testimonial2/100/100",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Avatar for a client testimonial",
+      "imageUrl": "https://picsum.photos/seed/testimonial3/100/100",
+      "imageHint": "product manager"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Avatar for a client testimonial",
+      "imageUrl": "https://picsum.photos/seed/testimonial4/100/100",
+      "imageHint": "creative founder"
+    },
+    {
+      "id": "team-1",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://picsum.photos/seed/team1/500/500",
+      "imageHint": "professional person"
+    },
+    {
+      "id": "team-2",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://picsum.photos/seed/team2/500/500",
+      "imageHint": "software developer"
+    },
+    {
+      "id": "team-3",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://picsum.photos/seed/team3/500/500",
+      "imageHint": "ux designer"
+    },
+    {
+      "id": "team-4",
+      "description": "Portrait of a team member.",
+      "imageUrl": "https://picsum.photos/seed/team4/500/500",
+      "imageHint": "marketing specialist"
+    },
+    {
+      "id": "realm-design",
+      "description": "Abstract design elements",
+      "imageUrl": "https://picsum.photos/seed/realm-design/800/450",
+      "imageHint": "abstract design"
+    },
+    {
+      "id": "realm-build",
+      "description": "Code on a screen",
+      "imageUrl": "https://picsum.photos/seed/realm-build/800/450",
+      "imageHint": "code screen"
+    },
+    {
+      "id": "realm-integrate",
+      "description": "Network of connected nodes",
+      "imageUrl": "https://picsum.photos/seed/realm-integrate/800/450",
+      "imageHint": "network nodes"
+    },
+    {
+      "id": "realm-automate",
+      "description": "Robot and gears",
+      "imageUrl": "https://picsum.photos/seed/realm-automate/800/450",
+      "imageHint": "robot gears"
+    },
+    {
+      "id": "realm-grow",
+      "description": "Upward trending chart",
+      "imageUrl": "https://picsum.photos/seed/realm-grow/800/450",
+      "imageHint": "chart graph"
+    },
+    {
+      "id": "realm-marketplace",
+      "description": "Online store interface",
+      "imageUrl": "https://picsum.photos/seed/realm-marketplace/800/450",
+      "imageHint": "online store"
+    },
+    {
+      "id": "realm-support",
+      "description": "Friendly support agent with headset",
+      "imageUrl": "https://picsum.photos/seed/realm-support/800/450",
+      "imageHint": "support agent"
+    },
+    {
+      "id": "realm-assist",
+      "description": "Personal assistant organizing tasks",
+      "imageUrl": "https://picsum.photos/seed/realm-assist/800/450",
+      "imageHint": "assistant tasks"
+    },
+    {
+      "id": "realm-learn",
+      "description": "Person studying at a desk",
+      "imageUrl": "https://picsum.photos/seed/realm-learn/800/450",
+      "imageHint": "person studying"
+    }
+  ]
+}
