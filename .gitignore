@@ -47,3 +47,7 @@ package-lock.json
 
 # Nested git repositories
 musical-adventure/
+
+# Firebase service account key (NEVER COMMIT THIS!)
+serviceAccountKey.json
+*serviceAccountKey*.json

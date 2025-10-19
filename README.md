@@ -253,3 +253,22 @@ Built with ❤️ by the VWEB.DEV Team
 ---
 
 Made with 💻 and ☕ by VWEB.DEV
+
+
+## 🔐 Admin Panel Security
+
+The admin panel is protected with Firebase Authentication. Only authenticated users with the 'admin' role can access it.
+
+**Quick Setup:**
+1. See [SECURITY_SETUP.md](SECURITY_SETUP.md) for complete guide
+2. Create admin user in Firebase Authentication
+3. Set user role to 'admin' in Firestore
+4. Login at `/login` page
+
+**Admin Routes:**
+- `/login` - Admin login page
+- `/admin` - Admin dashboard (protected)
+- All `/admin/*` routes require authentication
+
+---
+

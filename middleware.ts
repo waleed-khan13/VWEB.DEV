@@ -1,22 +1,21 @@
-
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const cookie = request.cookies.get('admin-authenticated');
-  const isAuthenticated = cookie?.value === 'true';
   const { pathname } = request.nextUrl;
 
-  // If user is trying to access an admin route and is not authenticated, redirect to login
-  if (pathname.startsWith('/admin') && !isAuthenticated) {
-    const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('redirect_to', pathname);
-    return NextResponse.redirect(loginUrl);
+  // Admin routes protection - handled by ProtectedRoute component on client side
+  // This middleware is kept simple for static checks
+  
+  // Allow access to login page always
+  if (pathname === '/login') {
+    return NextResponse.next();
   }
 
-  // If user is authenticated and tries to access the login page, redirect to admin dashboard
-  if (pathname === '/login' && isAuthenticated) {
-    return NextResponse.redirect(new URL('/admin', request.url));
+  // Admin routes will be protected by ProtectedRoute component
+  // which checks Firebase auth state on client side
+  if (pathname.startsWith('/admin')) {
+    return NextResponse.next();
   }
 
   return NextResponse.next();

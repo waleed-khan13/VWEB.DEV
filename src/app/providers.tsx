@@ -3,6 +3,7 @@
 
 import { Toaster } from "@/components/ui/toaster"
 import { CurrencyProvider } from '@/context/currency-context';
+import { AuthProvider } from '@/context/AuthContext';
 import { LoadingScreen } from '@/components/layout/loading-screen';
 import { branding } from "@/lib/branding";
 import { AnimatedSymbols } from "@/components/animated-symbols";
@@ -16,13 +17,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <CurrencyProvider>
-      {branding.loadingScreenEnabled && <LoadingScreen />}
-      {isClient && <AnimatedSymbols />}
-      <div className="relative z-10 bg-transparent">
-          {children}
-      </div>
-      <Toaster />
-    </CurrencyProvider>
+    <AuthProvider>
+      <CurrencyProvider>
+        {branding.loadingScreenEnabled && <LoadingScreen />}
+        {isClient && <AnimatedSymbols />}
+        <div className="relative z-10 bg-transparent">
+            {children}
+        </div>
+        <Toaster />
+      </CurrencyProvider>
+    </AuthProvider>
   )
 }

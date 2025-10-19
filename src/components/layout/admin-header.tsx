@@ -1,12 +1,38 @@
 
+
 "use client"
 
 import { SidebarTrigger } from "@/components/ui/sidebar"
+import { Button } from "@/components/ui/button"
+import { useAuth } from "@/context/AuthContext"
 import { branding } from "@/lib/branding"
 import Image from "next/image"
 import Link from "next/link"
+import { LogOut, User } from "lucide-react"
+import { useState } from "react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function Header() {
+  const { user, signOut } = useAuth()
+  const [isLoggingOut, setIsLoggingOut] = useState(false)
+
+  const handleLogout = async () => {
+    setIsLoggingOut(true)
+    try {
+      await signOut()
+    } catch (error) {
+      console.error('Logout error:', error)
+    } finally {
+      setIsLoggingOut(false)
+    }
+  }
   
   const Logo = () => {
     // In dark mode, use logoDark. In light mode, use logoLight.
@@ -36,16 +62,44 @@ export function Header() {
         <div className="md:hidden">
             <SidebarTrigger />
         </div>
-        <div className="flex w-full items-center justify-end gap-4">
+        <div className="flex w-full items-center justify-between gap-4">
              <Link href="/" className="flex items-center gap-2 group">
                 <Logo />
                 <span className="text-lg font-bold font-headline tracking-wider text-foreground">
                 VWEB.DEV
                 </span>
             </Link>
+
+            {user && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-2">
+                    <User className="h-4 w-4" />
+                    <span className="hidden md:inline">{user.email}</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuLabel>Admin Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link href="/admin/profile" className="cursor-pointer">
+                      <User className="mr-2 h-4 w-4" />
+                      Profile
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem 
+                    onClick={handleLogout} 
+                    disabled={isLoggingOut}
+                    className="text-destructive focus:text-destructive cursor-pointer"
+                  >
+                    <LogOut className="mr-2 h-4 w-4" />
+                    {isLoggingOut ? 'Logging out...' : 'Logout'}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
         </div>
     </header>
   )
 }
-
-    
