@@ -12,7 +12,8 @@ import { PartnersSection } from "@/components/sections/partners-section";
 import { Footer } from "@/components/layout/footer";
 import { ContactSection } from "@/components/sections/contact-section";
 
-export const dynamic = "force-dynamic"; // ✅ prevents static prerender errors
+// Use ISR (Incremental Static Regeneration) for better performance
+export const revalidate = 3600; // Revalidate every hour
 
 export default function Home() {
   return (

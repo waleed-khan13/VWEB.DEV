@@ -44,3 +44,6 @@ next-env.d.ts
 firebase-debug.log
 firestore-debug.log
 package-lock.json
+
+# Nested git repositories
+musical-adventure/
