@@ -32,8 +32,12 @@ export default function LoginPage() {
       } else {
         await signIn(email, password);
       }
-    } catch (err: any) {
-      setError(err.message || 'An error occurred');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unexpected error occurred');
+      }
     } finally {
       setLoading(false);
     }
@@ -140,91 +144,6 @@ export default function LoginPage() {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 ← Back to website
-              </Link>
-            </div>
-          </CardFooter>
-        </form>
-      </Card>
-    </div>
-  );
-}
-            {error && (
-              <Alert variant="destructive">
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-
-            {resetSuccess && (
-              <Alert>
-                <AlertDescription>
-                  Password reset email sent! Check your inbox.
-                </AlertDescription>
-              </Alert>
-            )}
-
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="admin@vweb.dev"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="pl-10"
-                  disabled={loading}
-                />
-              </div>
-            </div>
-
-            {!resetMode && (
-              <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    className="pl-10"
-                    disabled={loading}
-                  />
-                </div>
-              </div>
-            )}
-          </CardContent>
-
-          <CardFooter className="flex flex-col space-y-4">
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={loading}
-            >
-              {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {resetMode ? 'Send Reset Link' : 'Sign In'}
-            </Button>
-
-            <div className="flex items-center justify-between w-full text-sm">
-              <button
-                type="button"
-                onClick={() => {
-                  setResetMode(!resetMode);
-                  setError('');
-                  setResetSuccess(false);
-                }}
-                className="text-primary hover:underline"
-                disabled={loading}
-              >
-                {resetMode ? 'Back to login' : 'Forgot password?'}
-              </button>
-
-              <Link href="/" className="text-primary hover:underline">
-                Go to Home
               </Link>
             </div>
           </CardFooter>

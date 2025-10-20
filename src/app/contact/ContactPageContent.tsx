@@ -17,7 +17,7 @@ export default function ContactPage() {
                  <div className="text-center mb-12">
                     <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Get in Touch</h2>
                     <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
-                        We're here to help. Reach out to us with any questions or to start your next project.
+                        We&apos;re here to help. Reach out to us with any questions or to start your next project.
                     </p>
                 </div>
                 <div className="grid lg:grid-cols-3 gap-12 items-start">

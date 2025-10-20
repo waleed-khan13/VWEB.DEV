@@ -2,7 +2,7 @@
 "use client";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Handshake, MessageSquareQuote, ArrowRight, User } from "lucide-react";
+import { Briefcase, Handshake, MessageSquareQuote } from "lucide-react";
 import Link from "next/link";
 import { pricingPlans } from "@/lib/pricing-plans";
 import { partnersData } from "@/lib/partners";
@@ -26,7 +26,7 @@ export default function AdminPage() {
     return (
         <>
             <h1 className="font-headline text-3xl font-bold">Admin Dashboard</h1>
-            <p className="text-muted-foreground mt-2">Welcome to your application's command center.</p>
+            <p className="text-muted-foreground mt-2">Welcome to your application&apos;s command center.</p>
             
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Quick Stats */}
@@ -79,7 +79,7 @@ export default function AdminPage() {
                                         </Avatar>
                                         <div className="flex-grow">
                                             <p className="font-semibold">{testimonial.name}, <span className="text-sm text-muted-foreground">{testimonial.title}</span></p>
-                                            <p className="text-sm text-muted-foreground italic mt-1">"{testimonial.quote.substring(0, 100)}..."</p>
+                                            <p className="text-sm text-muted-foreground italic mt-1">&quot;{testimonial.quote.substring(0, 100)}...&quot;</p>
                                         </div>
                                     </div>
                                 )

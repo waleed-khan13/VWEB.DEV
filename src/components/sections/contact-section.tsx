@@ -171,7 +171,7 @@ export function ContactSection() {
     console.log("Form submitted:", values);
     toast({
       title: "Message Sent!",
-      description: "Thanks for reaching out. We'll get back to you soon.",
+      description: "Thanks for reaching out. We&apos;ll get back to you soon.",
     });
     form.reset();
     setIsSubmitting(false);
@@ -184,9 +184,9 @@ export function ContactSection() {
             <div className="flex items-center justify-center gap-4 mb-4">
                 <Mail className="w-12 h-12 text-primary" />
             </div>
-            <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Let's Build Together</h2>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">Let&apos;s Build Together</h2>
             <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
-                Have a project in mind? Fill out the form below and we'll get back to you to discuss your vision.
+                Have a project in mind? Fill out the form below and we&apos;ll get back to you to discuss your vision.
             </p>
             </div>
             <Card className="max-w-4xl mx-auto">

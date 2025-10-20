@@ -47,7 +47,7 @@ export default function ClientsPage() {
         
         <div className="text-center mt-20">
             <h2 className="font-headline text-2xl font-semibold mb-4">Ready to Join Them?</h2>
-            <p className="text-muted-foreground mb-6">Let's discuss how we can help your business succeed.</p>
+            <p className="text-muted-foreground mb-6">Let&apos;s discuss how we can help your business succeed.</p>
             <Button asChild size="lg">
                 <Link href="/contact">
                     Work With Us <ArrowRight className="ml-2" />

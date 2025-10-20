@@ -14,7 +14,7 @@ export default function AdminProfilePage() {
             <div>
             <h1 className="font-headline text-3xl font-bold">Site Settings</h1>
             <p className="text-muted-foreground mt-2">
-                Manage your site's branding and user profile.
+                Manage your site&apos;s branding and user profile.
             </p>
             </div>
         </div>

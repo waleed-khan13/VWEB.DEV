@@ -78,7 +78,7 @@ export function AnimatedSymbols() {
     resizeObserver.observe(container);
 
     let animationFrameId: number;
-    let mouse = { x: -1000, y: -1000 };
+    const mouse = { x: -1000, y: -1000 };
 
     const handleMouseMove = (event: MouseEvent) => {
         const rect = canvas.getBoundingClientRect();

@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Palette, RefreshCw, Save, Type, Image as ImageIcon, Code, Link as LinkIcon, Power, PowerOff, Clock } from "lucide-react";
+import { Palette, RefreshCw, Save, Type, Image as ImageIcon, Code, Link as LinkIcon } from "lucide-react";
 import { updateThemeAction } from "./actions";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { branding as initialBranding } from "@/lib/branding";
@@ -23,9 +23,9 @@ function hexToHslString(hex: string): string {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   if (!result) return "0 0% 0%";
   
-  let r = parseInt(result[1], 16) / 255;
-  let g = parseInt(result[2], 16) / 255;
-  let b = parseInt(result[3], 16) / 255;
+  const r = parseInt(result[1], 16) / 255;
+  const g = parseInt(result[2], 16) / 255;
+  const b = parseInt(result[3], 16) / 255;
 
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
@@ -703,7 +703,7 @@ export default function AdminThemePage() {
                                 <SelectItem value="eager">Eager</SelectItem>
                             </SelectContent>
                         </Select>
-                        <p className="text-xs text-muted-foreground">"Lazy" loads images as they enter the screen. "Eager" loads them immediately.</p>
+                        <p className="text-xs text-muted-foreground">&quot;Lazy&quot; loads images as they enter the screen. &quot;Eager&quot; loads them immediately.</p>
                     </div>
                 </div>
                  <div className="space-y-4">

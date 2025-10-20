@@ -328,7 +328,7 @@ export default function QuoteEstimatorPage() {
         return (
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.3 }}>
             <CardHeader>
-              <CardTitle>What is the project's complexity?</CardTitle>
+              <CardTitle>What is the project&apos;s complexity?</CardTitle>
               <CardDescription>This helps us understand the scope and scale.</CardDescription>
             </CardHeader>
             <CardContent>

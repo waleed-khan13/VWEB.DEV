@@ -11,7 +11,7 @@ export default function AdminAnalyticsPage() {
         <div>
           <h1 className="font-headline text-3xl font-bold">Analytics</h1>
           <p className="text-muted-foreground mt-2">
-            An overview of your application's performance.
+            An overview of your application&apos;s performance.
           </p>
         </div>
       </div>
